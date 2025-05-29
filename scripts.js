@@ -107,7 +107,7 @@ document.getElementById('reset').addEventListener('click', () => {
         errorSpan.classList.remove('show');
     });
 
-    document.getElementById('results').innerHTML = '<p>Kol kas nieko nėra.</p>';
+    document.getElementById('results').innerHTML = '<p class="error">Kol kas nieko nėra.</p>';
 });
 
 
