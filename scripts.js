@@ -6,31 +6,36 @@ function validateNumberInput(inputId, errorId, minValue, maxLength, maxValue, em
 
     if (value === '') {
         input.classList.remove('input-valid');
-        input.classList.add('error');
+        input.classList.add('error', 'shake');
+        setTimeout(() => input.classList.remove('shake'), 300);
         errorSpan.textContent = emptyMsg;
         errorSpan.classList.add('show');
         return true;
     } else if (value.length > maxLength) {
         input.classList.remove('input-valid');
-        input.classList.add('error');
+        input.classList.add('error', 'shake');
+        setTimeout(() => input.classList.remove('shake'), 300);
         errorSpan.textContent = maxLenMsg;
         errorSpan.classList.add('show');
         return true;
     } else if (isNaN(inputValue) || inputValue < minValue) {
         input.classList.remove('input-valid');
-        input.classList.add('error');
+        input.classList.add('error', 'shake');
+        setTimeout(() => input.classList.remove('shake'), 300);
         errorSpan.textContent = invalidMsg;
         errorSpan.classList.add('show');
         return true;
     } else if (inputValue > maxValue) {
         input.classList.remove('input-valid');
-        input.classList.add('error');
+        input.classList.add('error', 'shake');
+        setTimeout(() => input.classList.remove('shake'), 300);
         errorSpan.textContent = maxValMsg;
         errorSpan.classList.add('show');
         return true;
     } else if (!Number.isInteger(inputValue)) {
         input.classList.remove('input-valid');
-        input.classList.add('error');
+        input.classList.add('error', 'shake');
+        setTimeout(() => input.classList.remove('shake'), 300);
         errorSpan.textContent = intOnlyMsg;
         errorSpan.classList.add('show');
         return true;
@@ -109,9 +114,6 @@ document.getElementById('reset').addEventListener('click', () => {
 
     document.getElementById('results').innerHTML = '<p class="error">Kol kas nieko nėra.</p>';
 });
-
-
-
 
 
 

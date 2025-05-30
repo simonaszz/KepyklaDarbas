@@ -289,3 +289,17 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
+
+
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+input.shake {
+  animation: shake 0.3s;
+}
